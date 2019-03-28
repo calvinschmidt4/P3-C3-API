@@ -21,14 +21,15 @@ function getAPIdata() {
 	// render weather per day
 	.then(function(response) {
         console.log(response);
-        onAPISucces(response);          
+        onAPISucces(response); 
+
     })
     
     // catch error
-	// .catch(function(error) {
-	// 	onAPIError();
-	// 	console.error('Request failed', error);
-	// });
+	.catch(function(error) {
+		getAPIdata();
+		console.error('Request failed', error);
+	});
 }
 
 
@@ -44,14 +45,16 @@ function onAPISucces(response) {
         // showImage;
         media = '<img id="dogvalues" src="'+response.url+'" />';
         console.log('img');
+        dogBox.innerHTML = media;
     }
     else {
         // showVideo;.
-        media = '<video width="320" height="240" controls src="'+response.url+'" </video>';
+        // media = '<video width="320" height="240" controls src="'+response.url+'" </video>';
+        getAPIdata();
         console.log('video');
     };
 
-    dogBox.innerHTML = media;
+    
 
     
 
