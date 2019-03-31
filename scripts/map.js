@@ -1,7 +1,8 @@
 var refresh;
 
 function createMap(){      
-        
+     
+    //de api wordt opgevraagd en er wordt gezorgd dat de content over HTTPS wordt verstuurt:
     var platform = new H.service.Platform({
         useCIT: true,
         'app_id': '6jaAWHsrdukNd1sfb8m4',
@@ -28,7 +29,7 @@ function createMap(){
 
 
     // er wprdt een markerincon geimporteerd:
-    var icon = new H.map.Icon('../images/poi.svg');
+    var icon = new H.map.Icon('../images/poi.png');
 
     // er wordt een marker aangemaakt met het icon dat is aangemaakt:
     var marker = new H.map.Marker({ lat: 42.5, lng: -83.2 }, { icon: icon });
