@@ -1,4 +1,4 @@
-var refresh
+// var refresh
 
 
 /**
