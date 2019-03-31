@@ -1,15 +1,16 @@
 var refresh;
 
-function createMap(){   
+function createMap(){      
+        
     var platform = new H.service.Platform({
+        useCIT: true,
         'app_id': '6jaAWHsrdukNd1sfb8m4',
-        'app_code': '6fwonAXy3Op9JJQ3uuUmnA'
+        'app_code': '6fwonAXy3Op9JJQ3uuUmnA',
+        useHTTPS: true
     });
 
     // De default map types van het platform object worden verkregen:
     var defaultLayers = platform.createDefaultLayers();
-
-
 
     // Er wordt een map object geinitieerd en weergegeven:
     var map = new H.Map(
@@ -33,11 +34,9 @@ function createMap(){
     var marker = new H.map.Marker({ lat: 42.5, lng: -83.2 }, { icon: icon });
     var markerTwo = new H.map.Marker({ lat: 37, lng: -78.2 }, { icon: icon });
 
-
     // markers worden aan de kaart toegevoegd:
     map.addObject(marker);
     map.addObject(markerTwo);
-
 
     // MapEvents enables the event system
     // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
