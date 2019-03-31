@@ -36,9 +36,6 @@ function getAPIdata() {
     // refresh=setTimeout(getAPIdata,5000);
 }
 
-
-
-
 function onAPISucces(response) {
     var dogBox = document.getElementById('dog'),
         media;    
@@ -56,10 +53,7 @@ function onAPISucces(response) {
         // media = '<video width="320" height="240" controls src="'+response.url+'" </video>';
         getAPIdata();
         console.log('video');
-    };
-    
-  
-
+    }; 
 }
 
 /**
