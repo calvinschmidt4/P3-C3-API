@@ -1,18 +1,59 @@
-body, html {
+body {
     width: 100%;
-    height: 100%;
-    background-image: url("../images/burn.jpg");
-    background-position: center;
-    background-repeat: no-repeat; 
+    height: 100vh;
+    margin: auto 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background: url("../images/burn.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
+}
+
+.grid-container {
+    width: 100%;
+    display: grid; 
+    grid-template-columns: 100%;
+    grid-template-areas: 
+        'header'
+        'firstarticle'
+        'secondarticle';
+    grid-row-gap: 16px;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 20px;
+}
+
+
+.item1 { 
+    grid-area: header;
+    
+}
+.item2 { 
+    grid-area: firstarticle; 
+    display: flex;
+    flex-flow: column;
+    
+}
+.item3 { 
+    grid-area: secondarticle; 
+    display: flex;
+    flex-flow: column;
+    
 }
 
 #dogvalues {
-    width: auto;
-    opacity: 0.55;
-    border-radius: 20px;
-    height: 100%;
+    width: 100%;
+    opacity: 1;
+    /* border-radius: 20px; */
+    height: auto;
 }
 
 img {
@@ -21,13 +62,49 @@ img {
 }
 
 #dog {
-    background-color: rgb(194, 0, 0);
+    /* background-color: rgb(194, 0, 0, 0.5);
     margin: auto;
-    border-radius: 20px;
-    height: 320px;
+    border-radius: 20px; */
+    width: 50%;
+    margin: auto;
+    
+}
+
+#mapContainer {
+    margin: auto;
+    /* width: 640px; */
+    width: 100%;
+    height: 480px;
 }
 
 h1 {
-    color: #fff;
+    color: rgb(99, 6, 6);
     text-align: center;
+    
+}
+
+p {
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width: 599px) {
+   
+}
+
+@media only screen and (min-width: 899px) {
+   
+
+}
+
+@media only screen and (min-width: 1199px) {
+    .grid-container {
+        width: 100%;
+        display: grid; 
+        grid-template-columns: 50%;
+        grid-template-areas: 
+            'header header'
+            'firstarticle secondarticle';
+        grid-gap: 16px;
+    }
 }
