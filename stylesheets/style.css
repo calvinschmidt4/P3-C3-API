@@ -62,12 +62,8 @@ img {
 }
 
 #dog {
-    /* background-color: rgb(194, 0, 0, 0.5);
-    margin: auto;
-    border-radius: 20px; */
     width: 50%;
-    margin: auto;
-    
+    margin: auto;   
 }
 
 #mapContainer {
@@ -79,14 +75,12 @@ img {
 
 h1 {
     color: rgb(99, 6, 6);
-    text-align: center;
-    
+    text-align: center;    
 }
 
 p {
     font-weight: bold;
 }
-
 
 @media only screen and (min-width: 599px) {
    
@@ -94,7 +88,6 @@ p {
 
 @media only screen and (min-width: 899px) {
    
-
 }
 
 @media only screen and (min-width: 1199px) {
