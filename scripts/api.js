@@ -1,3 +1,5 @@
+var refresh
+
 
 /**
  * Fetch API data
@@ -29,7 +31,9 @@ function getAPIdata() {
 	.catch(function(error) {
 		getAPIdata();
 		console.error('Request failed', error);
-	});
+    });
+    
+    // refresh=setTimeout(getAPIdata,5000);
 }
 
 
@@ -53,10 +57,8 @@ function onAPISucces(response) {
         getAPIdata();
         console.log('video');
     };
-
     
-
-    
+  
 
 }
 
