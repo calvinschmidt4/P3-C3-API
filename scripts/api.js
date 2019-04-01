@@ -1,9 +1,5 @@
-// var refresh
 
-
-/**
- * Fetch API data
- */
+// Fetch API data
 function getAPIdata() {
     
     var url = 'https://random.dog/woof.json';
@@ -32,8 +28,7 @@ function getAPIdata() {
 		getAPIdata();
 		console.error('Request failed', error);
     });
-    
-    // refresh=setTimeout(getAPIdata,5000);
+
 }
 
 function onAPISucces(response) {
@@ -64,4 +59,21 @@ function updateUIError() {
 	dogBox.className = 'hidden'; 
 }
 
+
 getAPIdata();
+
+
+// setTimeout(function() {
+//     getAPIdata();
+//     }, 5000);
+
+
+
+
+// setTimeout(getAPIdata(),5000);
+
+// setInterval(getAPIdata(), 5000);
+
+setInterval(function() {
+    getAPIdata();
+    }, 10000);
