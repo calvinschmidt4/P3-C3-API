@@ -14,6 +14,16 @@ html {
     background-size: cover;
 }
 
+h1 {
+    color: rgb(99, 6, 6);
+    text-align: center;    
+}
+
+p {
+    margin: 0 0 16px 0;
+    font-weight: bold;
+}
+
 .grid-container {
     width: 100%;
     display: grid; 
@@ -23,26 +33,26 @@ html {
         'firstarticle'
         'secondarticle';
     grid-row-gap: 16px;
+    margin: auto;
 }
 
 .grid-container > div {
     background-color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    padding: 20px;
+    padding: 16px;
 }
 
-
-.item1 { 
+.header { 
     grid-area: header;
     
 }
-.item2 { 
+.firstarticle { 
     grid-area: firstarticle; 
     display: flex;
     flex-flow: column;
     
 }
-.item3 { 
+.secondarticle { 
     grid-area: secondarticle; 
     display: flex;
     flex-flow: column;
@@ -51,8 +61,6 @@ html {
 
 #dogvalues {
     width: 100%;
-    opacity: 1;
-    /* border-radius: 20px; */
     height: auto;
 }
 
@@ -70,34 +78,31 @@ img {
     margin: auto;
     /* width: 640px; */
     width: 100%;
-    height: 480px;
+    height: 360px;
 }
 
-h1 {
-    color: rgb(99, 6, 6);
-    text-align: center;    
-}
 
-p {
-    font-weight: bold;
-}
 
 @media only screen and (min-width: 599px) {
-   
+    .grid-container {
+        width: 95%;
+    }
 }
 
 @media only screen and (min-width: 899px) {
-   
-}
-
-@media only screen and (min-width: 1199px) {
     .grid-container {
-        width: 100%;
-        display: grid; 
+        width: 95%;
         grid-template-columns: 50%;
         grid-template-areas: 
             'header header'
             'firstarticle secondarticle';
         grid-gap: 16px;
+    }
+}
+
+@media only screen and (min-width: 1199px) {
+    .grid-container {
+        width: 80%;
+        grid-gap: 32px;
     }
 }
