@@ -1,5 +1,3 @@
-var refresh;
-
 function createMap(){      
      
     //de api wordt opgevraagd en er wordt gezorgd dat de content over HTTPS wordt verstuurt:
@@ -29,7 +27,7 @@ function createMap(){
 
 
     // er wprdt een markerincon geimporteerd:
-    var icon = new H.map.Icon('../images/poi.png');
+    var icon = new H.map.Icon('images/poi.png');
 
     // er wordt een marker aangemaakt met het icon dat is aangemaakt:
     var marker = new H.map.Marker({ lat: 42.5, lng: -83.2 }, { icon: icon });
